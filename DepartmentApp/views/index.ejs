@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h2>Depatrment</h2>
+<body>
+    <div>
+<form action="/adddept">
+    <button type="submit" name="add" id="add">Add Depatrment</button>
+</form>
+    <table border="2">
+        <tr>
+            <th>Department No:</th>
+            <th>Department Name</th>
+            <th>Location</th>
+        </tr>
+        
+
+        <% for(var i=0;i<deptarr.length;i++){%>
+            <tr>
+                <td><%=deptarr[i].DEPTNO%></td>
+                <td><%=deptarr[i].DNAME%></td>
+                <td><%=deptarr[i].LOC%></td>
+                <td><a href="/deletedept/<%=deptarr[i].DEPTNO%>">delete</a></td>
+            </tr>
+
+            <%}%>
+    </table>
+</div>
+</body>
+</html>
